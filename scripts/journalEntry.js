@@ -8,8 +8,7 @@
 export const JournalEntryComponent = (entry) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
-            <div class="">${entry.date}</div>
-            <div class="">${entry.entry}</div>
+            <div class="">${entry.date} ${entry.entry}</div>
         </section>
     `
-}
+} 
