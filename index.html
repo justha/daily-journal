@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daily Journal</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
@@ -14,51 +14,47 @@
     </header>
 
     <main>
-        <h2>
-            <section class="journalEntryForm">
-                <form action="">
-                    <fieldset>
-                        <label for="journalDate">Date of Entry</label>
-                        <input type="date" name="journalDate" id="journalDate">
-                    </fieldset>
+        <div class="container__content">
+            <div class="container__form">        
+                <section class="journalEntryForm">
+                    <form action="">
+                        <fieldset>
+                            <label for="journalDate">Date of Entry</label>
+                            <input type="date" name="journalDate" id="journalDate">
+                        </fieldset>
 
-                    <fieldset>
-                        <label for="journalConcept">Concepts Covered</label>
-                        <textarea name="journalConcept" id="journalConcept" cols="30" rows="1"></textarea>
-                    </fieldset>
+                        <fieldset>
+                            <label for="journalConcept">Concepts Covered</label>
+                            <textarea name="journalConcept" id="journalConcept" cols="30" rows="1"></textarea>
+                        </fieldset>
 
-                    <fieldset>
-                        <label for="journalEntry">Journal Entry</label>
-                        <textarea name="journalEntry" id="journalEntry" cols="30" rows="3"></textarea>
-                    </fieldset>
+                        <fieldset>
+                            <label for="journalEntry">Journal Entry</label>
+                            <textarea name="journalEntry" id="journalEntry" cols="30" rows="3"></textarea>
+                        </fieldset>
 
-                    <fieldset>
-                        <label for="journalMood">Mood</label>
-                        <select name="journalMood" id="journalMood">
-                            <option value="ok">Ok</option>
-                            <option value="happy">Happy</option>
-                            <option value="sad">Sad</option>
-                            <option value="excited">Excited</option>
-                            <option value="energetic">Energetic</option>
-                            <option value="jittery">Jittery</option>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <button type="button">Record Journal Entry</button>
-                    </fieldset>
-                </form>
-            </section>
-        </h2>
-       
-        <h3>
-            <section class="journalEntryList">
-                <!-- <ol>Orderd List of Journal Entries
-                    <li> Entry1 <button></button> </li> 
-                    <li> Entry2 <button></button> </li> 
-                    <li> Entry3 <button></button> </li> 
-                </ol> -->
-            </section> 
-        </h3>
+                        <fieldset>
+                            <label for="journalMood">Mood</label>
+                            <select name="journalMood" id="journalMood">
+                                <option value="ok">Ok</option>
+                                <option value="happy">Happy</option>
+                                <option value="sad">Sad</option>
+                                <option value="excited">Excited</option>
+                                <option value="energetic">Energetic</option>
+                                <option value="jittery">Jittery</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <button type="button">Record Journal Entry</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+            <div class="container__list">
+                <section class="log"></section> 
+            </div>
+        </div>
+
     </main>
 
     <footer>
