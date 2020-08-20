@@ -37,7 +37,7 @@ export const useEntries = () => {
     // )
 }
 
-// save -- use `fetch` with the POST method to add new entry to API
+// save entry -- use `fetch` with the POST method to add new entry to API
 export const saveEntry = (entry) => {   
     return fetch ("http://localhost:8088/entries", {
         method: "POST",
@@ -49,3 +49,14 @@ export const saveEntry = (entry) => {
         .then(getEntries)       // <-- Get all journal entries
         .then(stateChange)    // <-- Broadcast the state change even
     }
+
+
+// delete entry
+export const deleteEntry = (entryId) => {
+
+    return fetch (`http://localhost:8088/entries/${entryId}`, {
+        method: "DELETE",
+    })
+        .then(getEntries)
+        .then(stateChange)
+} 

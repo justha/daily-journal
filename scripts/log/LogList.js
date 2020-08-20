@@ -8,8 +8,8 @@
 import { useEntries, getEntries } from "./LogDataProvider.js"
 import { logHtml } from "./LogHtml.js"
 
-// DOM reference to where all entries will be rendered
-const contentTarget = document.querySelector(".container__list")
+const eventHub = document.querySelector(".container__content")
+const contentTarget = document.querySelector(".container__list")        // DOM reference to where all entries will be rendered
 
 /*
     Invoke the component that returns an
@@ -35,3 +35,9 @@ export const LogComponent = () => {
     .then(useEntries)
     .then(renderList)
 }
+
+// re-render list upon database state change
+eventHub.addEventListener("stateChanged", () => {
+    const newEntries = useEntries()
+    renderList(newEntries)
+})
