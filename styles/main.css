@@ -1,3 +1,6 @@
+@import "./form.css";
+
+
 header {
     font-size: 2rem;
 }
@@ -10,9 +13,21 @@ body {
 
 }
 
-h2 {
+.container__content { 
+    display: flex;
+    flex-direction: column;
+}
+
+.container__form {
     display: flex;
     flex-direction: column;
     width: 50%;
-    font-size: .75rem;
+    min-width: 300px;
+    font-size: medium;
+    margin: 2rem 0 2rem 0;
+}
+
+.container__list { 
+    font-size: small;
+    color: black;
 }
