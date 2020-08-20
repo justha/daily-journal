@@ -5,7 +5,7 @@
  *  *  Display the entry's full text, and the date it was entered below.
  * 
  */
-export const journalHtml = (entry) => {
+export const logHtml = (entry) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
             <div class="">${entry.date} ${entry.entry}</div>

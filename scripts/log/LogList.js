@@ -5,21 +5,22 @@
  *    data provider component
  */
 
-import { useEntries, getEntries } from "./JournalDataProvider.js"
-import { journalHtml } from "./JournalHtml.js"
+import { useEntries, getEntries } from "./LogDataProvider.js"
+import { logHtml } from "./LogHtml.js"
 
 // DOM reference to where all entries will be rendered
-const contentTarget = document.querySelector(".log")
+const contentTarget = document.querySelector(".container__list")
 
 
 const renderList = (entries) => {
     let htmlRepresentations = ""
 
     entries.forEach(entry => {
-        htmlRepresentations += journalHtml(entry)
+        htmlRepresentations += logHtml(entry)
     })
 
     contentTarget.innerHTML = `
+        <h2>Log</h2>
         <article class="journalList">
             ${htmlRepresentations}
         </article>
