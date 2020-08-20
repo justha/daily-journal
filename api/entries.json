@@ -4,57 +4,57 @@
       "date": "2020-07-07",
       "concept": "HTML & CSS",
       "note": "Discussed HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Ok",
+      "moodId": "1",
       "id": 1
     },
     {
       "date": "2020-07-10",
       "concept": "GitHub Workflow",
       "note": "Discussed best methods for managing the master and other working branches.",
-      "mood": "Ok",
+      "moodId": "1",
       "id": 2
     },
     {
       "date": "2020-07-14",
       "concept": "Modular Code",
       "note": "Covered importance of single responsibility and ways to automate hard-coded HTML using arrays of objects.",
-      "mood": "Ok",
+      "moodId": "1",
       "id": 3
     },
     {
       "date": "2020-08-20",
       "concept": "multiple filters",
       "note": "Using Glassdale as example, filtered list of criminals by combination of selected crime and officer.",
-      "mood": "ok",
+      "moodId": "1",
       "id": 4
     },
     {
-      "date": "2020-08-19",
-      "concept": "test",
-      "note": "test",
-      "mood": "ok",
-      "id": 5
+      "date": "2020-08-20",
+      "concept": "test moods",
+      "note": "test moods",
+      "moodId": "2",
+      "id": 6
     }
-  ], 
+  ],
   "moods": [
     {
-      "id": 1, 
+      "id": 1,
       "label": "ok"
-    }, 
+    },
     {
-      "id": 2, 
+      "id": 2,
       "label": "happy"
-    }, 
+    },
     {
-      "id": 3, 
+      "id": 3,
       "label": "sad"
-    }, 
+    },
     {
-      "id": 4, 
+      "id": 4,
       "label": "stellar"
-    }, 
+    },
     {
-      "id": 5, 
+      "id": 5,
       "label": "spacey"
     }
   ]

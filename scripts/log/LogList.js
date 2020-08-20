@@ -23,7 +23,7 @@ const renderList = (entries) => {
     })
 
     contentTarget.innerHTML = `
-        <h2>Log</h2>
+        <h2>Historical Log</h2>
         <article class="journalList">
             ${htmlRepresentations}
         </article>

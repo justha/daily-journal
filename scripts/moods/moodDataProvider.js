@@ -12,3 +12,4 @@ export const getMoods = () => {
 export const useMoods = () => {
     return moods.slice()
 }
+

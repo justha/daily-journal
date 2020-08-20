@@ -15,7 +15,7 @@ eventHub.addEventListener("click", clickEvent => {
             date: formDate.value, 
             concept: formConcept.value,
             note: formNote.value, 
-            mood: formMood.value
+            moodId: formMood.value
         }
         saveEntry(entry)        
     }
