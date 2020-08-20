@@ -6,6 +6,13 @@
  *      the entries for different purposes.
  */
 
+ const eventHub = document.querySelector(".container__content")
+
+// dispatch state change event
+export const stateChange = () => {
+    const customEvent = new CustomEvent("stateChanged")
+    eventHub.dispatchEvent(customEvent)
+}
 
 
 // This is the new API fetch call
@@ -30,3 +37,16 @@ export const useEntries = () => {
     //     Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
     // )
 }
+
+// save -- use `fetch` with the POST method to add new entry to API
+export const saveEntry = (entry) => {   
+    return fetch ("http://localhost:8088/entries", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+        .then(getEntries)       // <-- Get all journal entries
+        .then(stateChange)    // <-- Broadcast the state change even
+    }

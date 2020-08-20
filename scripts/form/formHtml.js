@@ -1,4 +1,25 @@
+import { saveEntry } from "../log/LogDataProvider.js";
+
+const eventHub = document.querySelector(".container__content")
 const contentTarget = document.querySelector(".container__form")
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "saveButton") {
+        const formDate = document.querySelector("#form--date")
+        const formConcept = document.querySelector("#form--concept")
+        const formNote = document.querySelector("#form--note")
+        const formMood = document.querySelector("#form--mood")
+        
+        const entry = {
+            date: formDate.value, 
+            concept: formConcept.value,
+            note: formNote.value, 
+            mood: formMood.value
+        }
+        saveEntry(entry)        
+    }
+})
+
 
 export const form = () => {
     contentTarget.innerHTML = `
@@ -6,22 +27,22 @@ export const form = () => {
             <form action="">
                 <fieldset>
                     <label for="journalDate">Date of Entry</label>
-                    <input type="date" name="journalDate" id="journalDate">
+                    <input type="date" name="journalDate" id="form--date">
                 </fieldset>
 
                 <fieldset>
                     <label for="journalConcept">Concepts Covered</label>
-                    <textarea name="journalConcept" id="journalConcept" cols="30" rows="1"></textarea>
+                    <textarea name="journalConcept" cols="30" rows="1" id="form--concept"></textarea>
                 </fieldset>
 
                 <fieldset>
                     <label for="journalEntry">Journal Entry</label>
-                    <textarea name="journalEntry" id="journalEntry" cols="30" rows="3"></textarea>
+                    <textarea name="journalEntry" cols="30" rows="3" id="form--note"></textarea>
                 </fieldset>
 
                 <fieldset>
                     <label for="journalMood">Mood</label>
-                    <select name="journalMood" id="journalMood">
+                    <select name="journalMood" id="form--mood">
                         <option value="ok">Ok</option>
                         <option value="happy">Happy</option>
                         <option value="sad">Sad</option>
@@ -32,7 +53,7 @@ export const form = () => {
                 </fieldset>
             </form>
 
-            <button type="button" id="button__save">Record Entry</button>
+            <button type="button" id="saveButton">Record Entry</button>
 
         </section>
     `
