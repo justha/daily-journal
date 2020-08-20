@@ -11,7 +11,10 @@ import { logHtml } from "./LogHtml.js"
 // DOM reference to where all entries will be rendered
 const contentTarget = document.querySelector(".container__list")
 
-
+/*
+    Invoke the component that returns an
+    HTML representation of a single entry
+*/
 const renderList = (entries) => {
     let htmlRepresentations = ""
 
@@ -32,33 +35,3 @@ export const LogComponent = () => {
     .then(useEntries)
     .then(renderList)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const render = entries => {
-//     // Use the journal entry data from the data provider component
-//     const htmlRepresentations = entries.reverse()
-
-
-//         /*
-//             Invoke the component that returns an
-//             HTML representation of a single entry
-//         */
-       
-//         entryHTMLRepresentation = JEComponent(entry)
-
-//         contentTarget.innerHTML += `
-//             <article class="journalEntryList">
-//                 ${entryHTMLRepresentation}
-//             </article>
-//         `

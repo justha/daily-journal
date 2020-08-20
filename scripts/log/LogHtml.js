@@ -8,7 +8,7 @@
 export const logHtml = (entry) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
-            <div class="">${entry.date} ${entry.entry}</div>
+            <div class="">${entry.date} -- ${entry.note}</div>
         </section>
     `
 } 
