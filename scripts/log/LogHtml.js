@@ -11,7 +11,7 @@ export const logHtml = (entry) => {
             <div><b>Date: </b>${entry.date}</div>
             <div><b>Concept: </b>${entry.concept}</div>
             <div><b>Note: </b>${entry.note}</div>
-            <div><b>Mood: </b>${entry.moodId}</div>
+            <div><b>Mood: </b>${entry.mood.label}</div>
             <br>
         </section>
     `
