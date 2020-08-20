@@ -1,25 +1,25 @@
 {
   "entries": [
     {
-        "date": "2020-07-07",
-        "concept": "HTML & CSS",
-        "note": "Discussed HTML components and how to make grid layouts with Flexbox in CSS.",
-        "mood": "Ok",
-        "id": 1
+      "date": "2020-07-07",
+      "concept": "HTML & CSS",
+      "note": "Discussed HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Ok",
+      "id": 1
     },
     {
-        "date": "2020-07-10",
-        "concept": "GitHub Workflow",
-        "note": "Discussed best methods for managing the master and other working branches.",
-        "mood": "Ok",
-        "id": 2
+      "date": "2020-07-10",
+      "concept": "GitHub Workflow",
+      "note": "Discussed best methods for managing the master and other working branches.",
+      "mood": "Ok",
+      "id": 2
     },
     {
-        "date": "2020-07-14",
-        "concept": "Modular Code",
-        "note": "Covered importance of single responsibility and ways to automate hard-coded HTML using arrays of objects.",
-        "mood": "Ok",
-        "id": 3
+      "date": "2020-07-14",
+      "concept": "Modular Code",
+      "note": "Covered importance of single responsibility and ways to automate hard-coded HTML using arrays of objects.",
+      "mood": "Ok",
+      "id": 3
     },
     {
       "date": "2020-08-20",
@@ -27,6 +27,35 @@
       "note": "Using Glassdale as example, filtered list of criminals by combination of selected crime and officer.",
       "mood": "ok",
       "id": 4
+    },
+    {
+      "date": "2020-08-19",
+      "concept": "test",
+      "note": "test",
+      "mood": "ok",
+      "id": 5
+    }
+  ], 
+  "moods": [
+    {
+      "id": 1, 
+      "label": "ok"
+    }, 
+    {
+      "id": 2, 
+      "label": "happy"
+    }, 
+    {
+      "id": 3, 
+      "label": "sad"
+    }, 
+    {
+      "id": 4, 
+      "label": "stellar"
+    }, 
+    {
+      "id": 5, 
+      "label": "spacey"
     }
   ]
 }

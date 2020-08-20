@@ -1,4 +1,5 @@
-import { saveEntry } from "../log/LogDataProvider.js";
+import { saveEntry, getEntries } from "../log/LogDataProvider.js";
+import { getMoods, useMoods } from "../moods/moodDataProvider.js";
 
 const eventHub = document.querySelector(".container__content")
 const contentTarget = document.querySelector(".container__form")
@@ -21,7 +22,7 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 
-export const form = () => {
+export const renderForm = (moods) => {
     contentTarget.innerHTML = `
         <section class="journalEntryForm">
             <form action="">
@@ -43,12 +44,12 @@ export const form = () => {
                 <fieldset>
                     <label for="journalMood">Mood</label>
                     <select name="journalMood" id="form--mood">
-                        <option value="ok">Ok</option>
-                        <option value="happy">Happy</option>
-                        <option value="sad">Sad</option>
-                        <option value="excited">Excited</option>
-                        <option value="energetic">Energetic</option>
-                        <option value="jittery">Jittery</option>
+                        <option value="0">select...</option>
+                        ${
+                            moods.map(mood => {
+                            return `<option value="${mood.id}">${mood.label}</option>`
+                            })
+                        }
                     </select>
                 </fieldset>
             </form>
@@ -58,3 +59,25 @@ export const form = () => {
         </section>
     `
 }
+
+export const form = () => {
+    getMoods()
+    .then(() => {
+        const moods = useMoods()
+        renderForm(moods)
+    })
+}
+
+
+// "mood" fieldset utilizing <option> values, prior to refactor above ^^
+{/* <fieldset>
+<label for="journalMood">Mood</label>
+<select name="journalMood" id="form--mood">
+    <option value="ok">Ok</option>
+    <option value="happy">Happy</option>
+    <option value="sad">Sad</option>
+    <option value="excited">Excited</option>
+    <option value="energetic">Energetic</option>
+    <option value="jittery">Jittery</option>
+</select>
+</fieldset> */}
